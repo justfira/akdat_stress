@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Streamlit cache
+.streamlit/
+__pycache__/
+
+# Dataset dan database lokal
+*.csv
+*.db
+
+# File sistem dan backup
+.DS_Store
+*.log

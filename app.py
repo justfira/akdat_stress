@@ -207,8 +207,29 @@ if menu == "Analisis":
 
     df = None
 
-    # --- OPSI 1: UPLOAD FILE ---
+    # --- OPSI 1: UPLOAD FILE ----
     if source == "Upload File CSV":
+        # Panduan Format CSV
+        with st.expander("📖 Panduan Format File CSV", expanded=False):
+            st.markdown("""
+            **Kolom yang Diperlukan:**
+            - `Choose your gender` → Male/Female
+            - `Age` → Umur (angka)
+            - `Your current year of Study` → Year 1/Year 2/Year 3/Year 4
+            - `What is your CGPA?` → Angka atau rentang (contoh: 3.50 atau 3.00 - 3.49)
+            - `Do you have Depression?` → Yes/No
+            - `Do you have Anxiety?` → Yes/No
+            - `Do you have Panic attack?` → Yes/No
+            - `Did you seek any specialist for a treatment?` → Yes/No
+            
+            **Contoh format header CSV:**
+            ```
+            Timestamp,Choose your gender,Age,What is your course?,Your current year of Study,What is your CGPA?,Marital status,Do you have Depression?,Do you have Anxiety?,Do you have Panic attack?,Did you seek any specialist for a treatment?
+            ```
+            
+            ⚠️ **Catatan:** Header kolom harus sama persis (case-sensitive). Gunakan format CSV dengan encoding UTF-8.
+            """)
+        
         uploaded_file = st.file_uploader("Unggah file CSV dataset stres mahasiswa", type=["csv"], disabled=disabled_state)
         if uploaded_file is not None:
             df = pd.read_csv(uploaded_file)

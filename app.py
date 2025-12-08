@@ -84,7 +84,7 @@ st.sidebar.markdown("""
 - Putri Diva Riyanti  
 - Reva Hanum Salsabila  
 """)
-st.sidebar.markdown("© 2025 Kelompok MPSI - Akuisisi Data")
+st.sidebar.markdown("© 2025 Kelompok 9 - Akuisisi Data")
 
 # ==============================
 # REFERENSI CLUSTER DARI SURVEY
